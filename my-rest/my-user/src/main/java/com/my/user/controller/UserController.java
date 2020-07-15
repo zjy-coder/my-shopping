@@ -20,6 +20,8 @@ public class UserController {
     public ResData test(){
         User user = new User();
         user.setName(value);
+        int i = 5/0;
+        System.out.println(i);
         user.setPhone("18329344212");
         return ResDataUtil.success(user);
     }

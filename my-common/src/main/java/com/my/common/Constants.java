@@ -10,6 +10,7 @@ import lombok.Data;
 public enum Constants {
     SUCCESS("000","成功"),
     Fail("001","失败"),
+    ERROR("-1","未知错误"),
     ILLEGAL_PARAM("002","非法参数"),
     ;
 

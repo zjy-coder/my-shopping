@@ -28,4 +28,23 @@ public class ResDataUtil {
         resData.setMsg(Constants.Fail.getMsg());
         return resData;
     }
+     /**
+     * 失败
+     */
+    public static ResData failRun(String code,String msg){
+        ResData resData =new ResData();
+        resData.setCode(code);
+        resData.setMsg(msg);
+        return resData;
+    }
+
+    /**
+     * 失败
+     */
+    public static ResData error(){
+        ResData resData =new ResData();
+        resData.setCode(Constants.ERROR.getCode());
+        resData.setMsg(Constants.ERROR.getMsg());
+        return resData;
+    }
 }
