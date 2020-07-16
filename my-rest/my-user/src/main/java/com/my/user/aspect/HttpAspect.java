@@ -28,18 +28,12 @@ public class HttpAspect {
         ServletRequestAttributes attributes = (ServletRequestAttributes) RequestContextHolder.getRequestAttributes();
         HttpServletRequest request = attributes.getRequest();
 
-        //url
-        logger.info("url: {}", request.getRequestURL());
-
-        //method
-        logger.info("method: {}", request.getMethod());
-
+        //url method
+        logger.info("url: {}，method: {}", request.getRequestURL(),request.getMethod());
         //ip
         logger.info("ip: {}", getIpAddr(request));
-
         //类方法
         logger.info("class_method: {}", joinPoint.getSignature().getDeclaringTypeName() + "." + joinPoint.getSignature().getName());
-
         //参数
         logger.info("args: {}", joinPoint.getArgs());
     }
